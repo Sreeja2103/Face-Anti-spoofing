@@ -1,0 +1,48 @@
+// System Architecture
+digraph {
+	A [label="Input Data"]
+	B [label="Video Files"]
+	C [label="Image Files"]
+	D [label="Frame Extraction using OpenCV"]
+	E [label="Extracted Frames"]
+	F [label="Labeling (Real/Spoof)"]
+	G [label="Data Preprocessing"]
+	H [label="Data Augmentation"]
+	I [label="Resizing and Normalization"]
+	J [label="Training Dataset"]
+	K [label="MobileNetV2 Model"]
+	L [label="Global Average Pooling"]
+	M [label="Dense Layer (256 units, ReLU)"]
+	N [label="Dropout Layer (0.5)"]
+	O [label="Output Layer (Sigmoid)"]
+	P [label="Model Training"]
+	Q [label="Model Evaluation"]
+	R [label="Confusion Matrix"]
+	S [label="Classification Report"]
+	T [label="Accuracy Metrics"]
+	U [label="Model Saving"]
+	V [label="Deployment for Real-Time Spoof Detection"]
+	A -> B
+	A -> C
+	B -> D
+	D -> E
+	C -> F
+	E -> F
+	F -> G
+	G -> H
+	G -> I
+	H -> J
+	I -> J
+	J -> K
+	K -> L
+	L -> M
+	M -> N
+	N -> O
+	O -> P
+	P -> Q
+	Q -> R
+	Q -> S
+	Q -> T
+	P -> U
+	U -> V
+}
